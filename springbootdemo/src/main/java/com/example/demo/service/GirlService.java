@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.domain.Demo;
+import com.example.demo.repository.GirlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +20,7 @@ public class GirlService {
         girlRepository.save(girlA);
 
         Demo girlB = new Demo();
-        girlB.setCupSize("BBB");
+        girlB.setCupSize("B");
         girlB.setAge(19);
         girlRepository.save(girlB);
     }

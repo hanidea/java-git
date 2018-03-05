@@ -1,16 +1,23 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.aspect.HttpAspect;
+import com.example.demo.domain.Demo;
+import com.example.demo.repository.GirlRepository;
+import com.example.demo.service.GirlService;
+import javafx.beans.binding.Binding;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.Id;
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 public class GirlController {
-
+    private final static Logger logger = LoggerFactory.getLogger(GirlController.class);
     @Autowired
     private GirlRepository girlRepository;
     @Autowired
@@ -23,20 +30,29 @@ public class GirlController {
     @GetMapping(value = "/girls")
     public List<Demo> girlList()
     {
+        logger.info("2girlList");
         return girlRepository.findAll();
     }
 
     /**
      * 添加一个数据
-     * @param cupSize
-     * @param age
      * @return
      */
+//    @PostMapping(value = "girls")
+//    public Demo girlAdd(@RequestParam("cupSize") String cupSize,@RequestParam("age") Integer age){
+//        Demo girl = new Demo();
+//        girl.setCupSize(cupSize);
+//        girl.setAge(age);
+//        return girlRepository.save(girl);
+//    }
     @PostMapping(value = "girls")
-    public Demo girlAdd(@RequestParam("cupSize") String cupSize,@RequestParam("age") Integer age){
-        Demo girl = new Demo();
-        girl.setCupSize(cupSize);
-        girl.setAge(age);
+    public Demo girlAdd(@Valid Demo girl, BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            System.out.println(bindingResult.getFieldError().getDefaultMessage());
+            return null;
+        }
+        girl.setCupSize(girl.getCupSize());
+        girl.setAge(girl.getAge());
         return girlRepository.save(girl);
     }
 

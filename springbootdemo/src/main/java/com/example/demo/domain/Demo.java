@@ -1,8 +1,9 @@
-package com.example.demo;
+package com.example.demo.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
 
 @Entity
 public class Demo {
@@ -10,6 +11,7 @@ public class Demo {
     @GeneratedValue
     private Integer id;
     private String cupSize;
+    @Min(value = 18,message = "未成年")
     private Integer age;
 
     public Demo() {
@@ -37,5 +39,14 @@ public class Demo {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Demo{" +
+                "id=" + id +
+                ", cupSize='" + cupSize + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
