@@ -1,0 +1,336 @@
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/img/favicon.ico
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/img/favicon.ico
+
+2018-07-03 16:56:31 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+2018-07-03 16:56:31 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+
+2018-07-03 16:56:50 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/?callback=jQuery214008882527972644483_1530608191388
+2018-07-03 16:56:50 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/?callback=jQuery214008882527972644483_1530608191388
+
+2018-07-03 16:56:50 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:56:50 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:56:50 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:56:50 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:56:50 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 16:56:50 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 16:57:03 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/?&callback=jQuery2140680068069155743_1530608210127
+2018-07-03 16:57:03 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/?&callback=jQuery2140680068069155743_1530608210127
+
+2018-07-03 16:57:03 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:57:03 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:57:03 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:57:03 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:57:03 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 16:57:03 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 16:57:11 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/dash/2
+2018-07-03 16:57:11 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/dash/2
+
+2018-07-03 16:57:11 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dash/2
+2018-07-03 16:57:11 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dash/2
+
+2018-07-03 16:57:16 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/sql
+2018-07-03 16:57:16 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/sql
+
+2018-07-03 16:57:16 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/sql/
+2018-07-03 16:57:16 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/sql/
+
+2018-07-03 16:57:18 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:57:18 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 16:57:18 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 16:57:18 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 16:57:20 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 16:57:20 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 16:57:20 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 16:57:20 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 17:04:12 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/img/favicon.ico
+2018-07-03 17:04:12 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/img/favicon.ico
+
+2018-07-03 17:04:23 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.min.map
+2018-07-03 17:04:23 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.min.map
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-2.1.4.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/bootstrap-3.3.5.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.vis.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/dash.sql.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/d3-3.5.6.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-3.3.5.min.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/bootstrap-vertical-menu.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/font-awesome-4.4.0.min.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/default.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/normalize.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/nv.d3.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/dash.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/gridstack.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/css/pygments.css
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/nv.d3-1.8.1.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-watch-1.16.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/lodash-3.10.1.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery-ui-1.11.4.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/gridstack-0.2.4.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/moment-2.10.6.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.tablesorter-2.23.5.min.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/stream_layers.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/store.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/ace-1.2.0.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/theme-sqlserver.js
+
+2018-07-03 17:04:45 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+2018-07-03 17:04:45 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/mode-mysql.js
+
+2018-07-03 17:04:46 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.min.map
+2018-07-03 17:04:46 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/js/jquery.min.map
+
+2018-07-03 17:04:46 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 17:04:46 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
+2018-07-03 17:04:46 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+2018-07-03 17:04:46 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/static/fonts/fontawesome-webfont.woff2?v=4.4.0
+
+2018-07-03 17:04:56 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/
+2018-07-03 17:04:56 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/
+
+2018-07-03 17:04:56 [24456] [INFO] [views.py:21 before] start :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+2018-07-03 17:04:56 [24456] [INFO] [views.py:15 after] end :127.0.0.1 http://127.0.0.1:9090/data/dashes/
+
