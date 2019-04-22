@@ -1,84 +1,59 @@
 import 'package:flutter/material.dart';
 
-void main()=>runApp(MyApp(
-  items:new List<String>.generate(1000,(i)=>"Item $i")
-));
+void main()=>runApp(MyApp());
 
 class MyApp extends StatelessWidget{
-  final List<String> items;
-  MyApp({Key key, @required this.items}):super(key:key);
   @override
-  Widget build (BuildContext context){
+  Widget build(BuildContext context){
     return MaterialApp(
-      title:'flutter demo',
-      home :Scaffold(
-        appBar: new AppBar(
-          title:new Text('ListView widget')
+      title:'电影海报',
+      home:Scaffold(
+        appBar: AppBar(
+          title:Text('电影')
         ),
-        body:new ListView.builder(
-          itemCount: items.length,
-          itemBuilder:(context,index){
-            return new ListTile(
-              title:new Text('${items[index]}')
-            );
-          }
-        )
-        // body:Center(
-        //   child: Container(
-        //     height: 200.0,
-        //     child: MyList()
-        //   ),
-        // )
-        // body:new ListView(
-        //   children: <Widget>[
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/vola-cars-app-ui-1200x400.jpg'),
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/50-location-element-icons-1200x400.jpg'),
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/30-time-management-element-icons-1200x400.jpg'),
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/vola-cars-app-ui-1200x400.jpg'),
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/50-location-element-icons-1200x400.jpg'),
-        //     new Image.network('http://www.51hanhan.com/hanku/wp-content/uploads/2019/03/30-time-management-element-icons-1200x400.jpg'),
-        //     // new ListTile(
-        //     //   leading:new Icon(Icons.border_right),
-        //     //   title:new Text('border_right')
-        //     // ),
-        //     // new ListTile(
-        //     //   leading:new Icon(Icons.border_left),
-        //     //   title:new Text('border_left')
-        //     // ),
-        //     // new ListTile(
-        //     //   leading:new Icon(Icons.border_top),
-        //     //   title:new Text('border_top')
-        //     // )
-        //   ],
-        // )
-      )
-    );
-  }
-}
+        body:GridView(
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 2.0,
+            crossAxisSpacing: 2.0,
+            childAspectRatio: 0.7,
+          ),
+          children: <Widget>[
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2541240741.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549537782.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549177902.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2543631842.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2552503815.jpg',fit:BoxFit.cover),
+            new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2549148229.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549329796.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520349914.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551690865.jpg',fit:BoxFit.cover),
+            new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2494632039.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2552503815.jpg',fit:BoxFit.cover),
+            new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2549148229.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549329796.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2520349914.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2551690865.jpg',fit:BoxFit.cover),
+            new Image.network('https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2494632039.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2541240741.jpg',fit:BoxFit.cover),
+            new Image.network('https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2549537782.jpg',fit:BoxFit.cover),
 
-class MyList extends StatelessWidget{
- @override
- Widget build (BuildContext context){
-    return ListView(
-      scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                new Container(
-                  width:180.0,
-                  color:Colors.lightBlue
-                ),
-                new Container(
-                  width:180.0,
-                  color:Colors.amber
-                ),
-                new Container(
-                  width:180.0,
-                  color:Colors.deepOrange
-                ),
-                new Container(
-                  width:180.0,
-                  color:Colors.deepPurpleAccent
-                ),
-              ],
+          ],
+        )
+        // body:GridView.count(
+        //   padding: const EdgeInsets.all(10.0),
+        //   crossAxisSpacing: 10.0,
+        //   crossAxisCount: 3,
+        //   children:<Widget>[
+        //     const Text('test 1 gogo'),
+        //     const Text('test 1 gogo'),
+        //     const Text('test 1 gogo'),
+        //     const Text('test 1 gogo'),
+        //     const Text('test 1 gogo'),
+        //     const Text('test 1 gogo'),
+        //   ]
+        //)
+      )
     );
   }
 }
