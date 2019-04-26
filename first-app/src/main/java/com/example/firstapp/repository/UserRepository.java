@@ -17,7 +17,7 @@ public class UserRepository {
      * 采用内存型的存储方式 -> Map
      */
     private final ConcurrentMap<Integer,User> respository
-            = new ConcurrentHashMap<>();
+            = new ConcurrentHashMap<>(16);
     private final static AtomicInteger idGenerator =
             new AtomicInteger();
     /**
@@ -32,5 +32,12 @@ public class UserRepository {
         user.setId(id);
         // put 方法返回 null 时表示保存成功
         return respository.put(id,user) == null;
+    }
+    /**
+     * 返回所有用户列表
+     * @return 所有用户列表
+     */
+    public Collection<User> findAll(){
+        return respository.values();
     }
 }
