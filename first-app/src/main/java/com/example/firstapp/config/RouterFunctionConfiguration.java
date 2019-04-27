@@ -17,7 +17,7 @@ import java.util.Collection;
  * 描述: 配置映射<br>
  *
  * @author James
- * @date 2019/04/26
+ * @date 2019/04/27
  */
 @Configuration
 public class RouterFunctionConfiguration {
@@ -28,7 +28,6 @@ public class RouterFunctionConfiguration {
      * 请求接口：ServerRequest
      * 响应接口：ServerResponse
      * 即可支持 Servlet 规范，也可以支持自定义，不如 Netty(web Server)
-     * 以本例
      * 定义 GET 请求，并且放回所有的用户对象 URI：/person/find/all
      * Flux 是 0 - N 个对象集合
      * Mono 是 0 - 1 个对象集合
