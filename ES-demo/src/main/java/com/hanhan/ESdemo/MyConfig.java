@@ -11,7 +11,7 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * Created by corning on 2018/3/5.
+ * Created by James on 2019/4/30.
  */
 @Configuration
 public class MyConfig {
