@@ -11,6 +11,12 @@ from django.core.paginator import Paginator
 def hello_world(request):
     return HttpResponse ("Hello World")
 
+def edit_page(request,article_id):
+    if str(article_id) == '0':
+        return render(request, 'blog/edit.html')
+    article = Article.objects.get(pk=article_id)
+    return render(request, 'blog/edit.html',{'article':article})
+
 def article_content(request):
     article = Article.objects.all()[0]
     title = article.title
@@ -93,3 +99,59 @@ def get_detail_page(request,article_id):
                       'next_article': next_article
                   }
                   )
+
+def edit_action(request):
+    title = request.POST.get('title','TITLE')
+    content = request.POST.get('content','CONTENT')
+    article_id = request.POST.get('article_id','0')
+    page = request.GET.get('page')
+    if page:
+        page = int(page)
+    else:
+        page = 1
+    print('page param: ', page)
+    all_article = Article.objects.all()
+    top10_article_list = Article.objects.order_by('-publish_date')[:10]
+
+    paginator = Paginator(all_article, 6)
+    page_num = paginator.num_pages
+    print('page num:', page_num)
+    page_article_list = paginator.page(page)
+    if page_article_list.has_next():
+        next_page = page + 1
+    else:
+        next_page = page
+    if page_article_list.has_previous():
+        previous_page = page - 1
+    else:
+        previous_page = page
+    if article_id == '0':
+        Article.objects.create(title=title,content=content)
+        return render(request, 'blog/index.html',
+                      {
+                          'article_list': page_article_list,
+                          'page_num': range(1, page_num + 1),
+                          'curr_page': page,
+                          'next_page': next_page,
+                          'previous_page': previous_page,
+                          'top10_article_list': top10_article_list
+                      }
+                      )
+    article = Article.objects.get(pk=article_id)
+    article.title = title
+    article.content = content
+    article.save()
+    return render(request, 'blog/index.html',
+                  {
+                      'article_list': page_article_list,
+                      'page_num': range(1, page_num + 1),
+                      'curr_page': page,
+                      'next_page': next_page,
+                      'previous_page': previous_page,
+                      'top10_article_list': top10_article_list
+                  }
+                  )
+
+def delete_action(request, article_id):
+    Article.objects.filter(article_id = article_id).delete()
+    return render(request, 'blog/delete_completed.html')
