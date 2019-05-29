@@ -1,11 +1,10 @@
 import os
 def get_user_click(rating_file):
     if not os.path.exists(rating_file):
-        return{},{}
+        return{}
     fp = open(rating_file)
     num = 0
     user_click = {}
-    user_click_time = {}
     for line in fp:
         if num == 0:
             num+=1
@@ -14,15 +13,13 @@ def get_user_click(rating_file):
         if len(item)<4:
             continue
         [userid,itemid,rating,timestamp] = item
-        if userid + "_" + itemid not in user_click_time:
-            user_click_time[userid+"_"+itemid]=int(timestamp)
         if float(rating)<3.0:
             continue
         if userid not in user_click:
             user_click[userid] = []
         user_click[userid].append(itemid)
     fp.close()
-    return user_click,user_click_time
+    return user_click
 
 def get_item_info(item_file):
     if not os.path.exists(item_file):

@@ -11,24 +11,7 @@ def base_contribute_score():
     '''
     return 1
 
-def update_one_contribute_score(user_total_click_num):
-    """
-    item cf update sim contribution score by user
-    """
-    return 1 / math.log10(1 + user_total_click_num)
-
-def update_two_contribute_score(click_time_one,click_time_two):
-    """
-    item cf update two sim contribution score by user
-    """
-    delata_time = abs(click_time_one-click_time_two)
-    total_sec = 60*60*24
-    delata_time = delata_time/total_sec
-    return 1/(1+delata_time)
-
-
-
-def cal_item_sim(user_click,user_click_time):
+def cal_item_sim(user_click):
     """
     Arg:
         user_click:dict,key userid value [itemid1,itemid2]
@@ -44,21 +27,13 @@ def cal_item_sim(user_click,user_click_time):
             item_user_click_time[itemid_i]+=1
             for index_j in range(index_i+1,len(itemlist)):
                 itemid_j = itemlist[index_j]
-                if user+"_"+itemid_i not in user_click_time:
-                    click_time_one=0
-                else:
-                    click_time_one = user_click_time[user + "_" + itemid_i]
-                if user+"_"+itemid_j not in user_click_time:
-                    click_time_two=0
-                else:
-                    click_time_two = user_click_time[user + "_" + itemid_j]
                 co_appear.setdefault(itemid_i,{})
                 co_appear[itemid_i].setdefault(itemid_j,0)
-                co_appear[itemid_i][itemid_j] += update_two_contribute_score(click_time_one,click_time_two)
+                co_appear[itemid_i][itemid_j] += base_contribute_score()
 
                 co_appear.setdefault(itemid_j,{})
                 co_appear[itemid_j].setdefault(itemid_i,0)
-                co_appear[itemid_j][itemid_i] += update_two_contribute_score(click_time_one,click_time_two)
+                co_appear[itemid_j][itemid_i] += base_contribute_score()
     item_sim_score = {}
     item_sim_score_sorted ={}
     for itemid_i,relate_item in co_appear.items():
@@ -137,12 +112,12 @@ def main_flow():
     main flow of itemcf
     :return:
     """
-    user_click,user_click_time = reader.get_user_click("../data/ratings.csv")
+    user_click = reader.get_user_click("../data/ratings.csv")
     item_info = reader.get_item_info("../data/movies.csv")
-    sim_info = cal_item_sim(user_click,user_click_time)
-    debug_itemsim(item_info,sim_info)
-    # recom_result = cal_recom_result(sim_info,user_click)
-    # debug_recomresult(recom_result, item_info)
+    sim_info = cal_item_sim(user_click)
+    # debug_itemsim(item_info,sim_info)
+    recom_result = cal_recom_result(sim_info,user_click)
+    debug_recomresult(recom_result, item_info)
     # print(recom_result["1"])
 
 if __name__ =="__main__":
