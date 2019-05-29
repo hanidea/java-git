@@ -70,6 +70,42 @@ def cal_recom_result(sim_info,user_click):
                 itemsimscore = itemsimzuhe[1]
                 recom_info[user][itemsimid]=itemsimscore
     return recom_info
+def debug_itemsim(item_info,sim_info):
+    """
+    show itemsim info
+    Args:
+        item_info:dict,key itemid value:[title,genres]
+        sim_info:dict key itemid,value dict,key [(itemid1,simscore),(itemid2,simscore)]
+    """
+    fixed_itemid = "1";
+    if fixed_itemid not in item_info:
+        print ("invalid itemid")
+        return
+    [title_fix,genres_fix]=item_info[fixed_itemid]
+    for zuhe in sim_info[fixed_itemid][:5]:
+        itemid_sim = zuhe[0]
+        sim_score = zuhe[1]
+        if itemid_sim not in item_info:
+            continue
+        [title,genres] = item_info[itemid_sim]
+        print (title_fix + "\t" + genres_fix + "\tsim:" + title + "\t" + genres + "\t" + str(sim_score))
+
+def debug_recomresult(recom_result,item_info):
+    """
+    debug recomresult
+    Args:
+    recom_result:key userid value:dict,value_key:itemid,value_value:recom_score
+    item_info:dict,key itemid value:[title,genre]
+    """
+    user_id = "1"
+    if user_id not in recom_result:
+        print ("invalid result")
+        return
+    for zuhe in sorted(recom_result[user_id].items(),key = operator.itemgetter(1),reverse=True):
+        itemid,score = zuhe
+        if itemid not in item_info:
+            continue
+        print (",".join(item_info[itemid])+"\t"+str(score))
 
 def main_flow():
     """
@@ -77,9 +113,12 @@ def main_flow():
     :return:
     """
     user_click = reader.get_user_click("../data/ratings.csv")
+    item_info = reader.get_item_info("../data/movies.csv")
     sim_info = cal_item_sim(user_click)
+    # debug_itemsim(item_info,sim_info)
     recom_result = cal_recom_result(sim_info,user_click)
-    print(recom_result["1"])
+    debug_recomresult(recom_result, item_info)
+    # print(recom_result["1"])
 
 if __name__ =="__main__":
     main_flow()
