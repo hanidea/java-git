@@ -10,15 +10,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dataAnalysis$numpyTest.coverage" NAME="numpyTest Coverage Results" MODIFIED="1559542201896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dataAnalysis$numpyTest.coverage" NAME="numpyTest Coverage Results" MODIFIED="1559545081909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="numpyTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/numpyTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="118">
+              <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -50,8 +50,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="615" />
-    <option name="y" value="74" />
+    <option name="x" value="543" />
+    <option name="y" value="182" />
     <option name="width" value="1280" />
     <option name="height" value="726" />
   </component>
@@ -133,7 +133,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="615" y="74" width="1280" height="726" extended-state="0" />
+    <frame x="543" y="182" width="1280" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -167,6 +167,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
   </component>
@@ -180,8 +187,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/numpyTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="118">
+          <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
         </state>
       </provider>
     </entry>
