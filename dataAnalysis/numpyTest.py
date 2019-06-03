@@ -1,6 +1,6 @@
 #encoding=utf-8
 import  numpy as np
-
+from numpy.linalg import *
 def main():
     lst=[[1,3,5],[2,4,6]]
     print(type(lst))
@@ -63,7 +63,7 @@ def main():
     print(np.split(lst1,2))
     print(np.copy(lst1))
     #4 liner
-    from numpy.linalg import *
+
     print(np.eye(3))
     lst = np.array([[1,2],[3,4]])
     print("Inv:")
