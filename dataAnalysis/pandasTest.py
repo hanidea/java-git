@@ -1,8 +1,9 @@
 #encoding=utf-8
 import numpy as np
 import pandas as pd
-
-
+from pylab import *
+from openpyxl import Workbook
+import xlrd
 def main():
     #Data Structure
     s=pd.Series([i*2 for i in range(1,11)])
@@ -50,9 +51,61 @@ def main():
     df2[df2>0]=-df2
     print(df2)
 
-    
+    #Missing Values
+    df1=df.reindex(index=dates[:4],columns=list("ABCD")+["G"])
+    df1.loc[dates[0]:dates[1],"G"]=1
+    print(df1)
+    print(df1.dropna())
+    print(df1.fillna(value=2))
 
+    #statisic
+    print(df.mean())
+    print(df.var())
+    s = pd.Series([1,2,4,np.nan,5,7,9,10],index=dates)
+    print(s)
+    print(s.shift(2))
+    print(s.diff())
+    print(df.apply(lambda x:x.max()-x.min()))
 
+    #Concat
+    pieces=[df[:3]]
+    print(pd.concat(pieces))
+    left=pd.DataFrame({"key":["x","y"],"value":[1,2]})
+    right=pd.DataFrame({"key":["x","z"],"value":[3,4]})
+    print("LEFT:",left)
+    print("RIGHT",right)
+    print(pd.merge(left,right,on="key",how="outer"))
+    df3 = pd.DataFrame({"A":["a","b","c","b"], "B":list(range(4))})
+    print(df3.groupby("A").sum())
+
+    #Reshape
+    import datetime
+    df4=pd.DataFrame({'A':['one','one','two','three']*6,
+                     'B':['a','b','c']*8,
+                     'C':['foo','foo','foo','bar','bar','bar']*4,
+                     'D':np.random.randn(24),
+                     'E':np.random.randn(24),
+                     'F':[datetime.datetime(2019, i, 1)for i in range(1,13)] +
+                         [datetime.datetime(2019, i, 15)for i in range(1,13)]})
+    print(pd.pivot_table(df4,values="D",index=["A","B"],columns=["C"]))
+
+    #Time Series
+    t_exam=pd.date_range("20190604",periods=10,freq="S")
+    print(t_exam)
+
+    #Graph
+    ts=pd.Series(np.random.randn(1000),index=pd.date_range("20190604",periods=1000))
+    ts=ts.cumsum()
+    ts.plot()
+    show()
+
+    #File
+    df6=pd.read_csv("./data/test.csv")
+    print(df6)
+    df7=pd.read_excel("./data/test.xlsx")
+    print("Excel",df7)
+    df6.to_csv('./data/test2.csv')
+    df7.to_excel('./data/test2.xlsx')
 
 if __name__=="__main__":
     main()
