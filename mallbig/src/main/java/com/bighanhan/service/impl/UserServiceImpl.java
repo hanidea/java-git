@@ -39,11 +39,11 @@ public class UserServiceImpl implements IUserService{
 //        }
         ServerResponse validResponse = this.checkValid(user.getUsername(),Const.USERNAME);
         if(!validResponse.isSuccess()){
-            return validResponse
+            return validResponse;
         }
         validResponse = this.checkValid(user.getEmail(),Const.EMAIL);
         if(!validResponse.isSuccess()){
-            return validResponse
+            return validResponse;
         }
 //        resultCount = userMapper.checkEmail(user.getEmail());
 //        if(resultCount > 0){
