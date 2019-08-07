@@ -2,6 +2,7 @@ package com.bighanhan.service.impl;
 
 import com.bighanhan.common.Const;
 import com.bighanhan.common.ServerResponse;
+import com.bighanhan.common.TokenCache;
 import com.bighanhan.dao.UserMapper;
 import com.bighanhan.pojo.User;
 import com.bighanhan.service.IUserService;
