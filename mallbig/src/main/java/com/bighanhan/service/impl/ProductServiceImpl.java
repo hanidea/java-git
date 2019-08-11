@@ -2,9 +2,13 @@ package com.bighanhan.service.impl;
 
 import com.bighanhan.common.ResponseCode;
 import com.bighanhan.common.ServerResponse;
+import com.bighanhan.dao.CategoryMapper;
 import com.bighanhan.dao.ProductMapper;
+import com.bighanhan.pojo.Category;
 import com.bighanhan.pojo.Product;
 import com.bighanhan.service.IProductService;
+import com.bighanhan.util.DateTimeUtil;
+import com.bighanhan.util.PropertiesUtil;
 import com.bighanhan.vo.ProductDetailVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +19,9 @@ public class ProductServiceImpl implements IProductService {
 
     @Autowired
     private ProductMapper productMapper;
+
+    @Autowired
+    private CategoryMapper categoryMapper;
 
     public ServerResponse saveOrUpdateProduct(Product product){
         if(product != null)
