@@ -3,9 +3,11 @@ package com.bighanhan.service;
 import com.bighanhan.common.ServerResponse;
 import com.bighanhan.pojo.Product;
 import com.bighanhan.vo.ProductDetailVo;
+import com.github.pagehelper.PageInfo;
 
 public interface IProductService {
     ServerResponse saveOrUpdateProduct(Product product);
     ServerResponse<String> setSaleStatus(Integer productId,Integer status);
     ServerResponse<ProductDetailVo> manageProductDetail(Integer productId);
+    ServerResponse<PageInfo> getProductList(int pageNum, int pageSize);
 }
