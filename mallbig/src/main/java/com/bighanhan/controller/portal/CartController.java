@@ -112,11 +112,4 @@ public class CartController {
         return iCartService.getCartProductCount(user.getId());
     }
 
-    //全选
-    //全反选
-
-    //单独选
-    //单独反选
-
-    //查询当前用户的购物车里面的产品数量，如果一个产品有10个，那么数量就是10.
 }
