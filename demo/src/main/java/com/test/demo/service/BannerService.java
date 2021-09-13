@@ -1,8 +1,7 @@
 package com.test.demo.service;
 
-import org.springframework.stereotype.Service;
+import com.test.demo.model.Banner;
 
-@Service
-public class BannerService {
-
+public interface BannerService {
+    Banner getByName(String name);
 }

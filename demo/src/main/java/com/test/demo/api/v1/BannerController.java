@@ -1,19 +1,16 @@
 package com.test.demo.api.v1;
 
 import com.test.demo.dto.PersonDTO;
-import com.test.demo.exception.http.ForbiddenException;
 import com.test.demo.exception.http.NotFoundException;
+import com.test.demo.model.Banner;
 import com.test.demo.sample.IConnect;
-import com.test.demo.sample.ISkill;
-import com.test.demo.sample.hero.Diana;
+import com.test.demo.service.BannerServiceImpl;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import javax.validation.constraints.Max;
 
-import java.util.Map;
+import javax.validation.constraints.NotBlank;
 
 @RestController
 //@Lazy
@@ -21,11 +18,22 @@ import java.util.Map;
 @Validated
 public class BannerController {
 
-    @Autowired
+    //@Autowired
     //@Qualifier("irelia")
-    private ISkill iSkill;
+    //private ISkill iSkill;
     @Autowired
     private IConnect iConnect;
+    @Autowired
+    private BannerServiceImpl bannerService;
+
+    @GetMapping("/name/{name}")
+    public Banner getByName(@PathVariable @NotBlank String name){
+        Banner banner = bannerService.getByName(name);
+        if(banner == null){
+            throw new NotFoundException(30005);
+        }
+        return banner;
+    }
     //RestFul API
     //host:port/v1/banner
     //header
@@ -33,7 +41,7 @@ public class BannerController {
     //url?version = v1
     @PostMapping("/test/{id}")
     public PersonDTO test(@PathVariable @Range(min=1,max=10,message = "不可以超过10个") Integer id, @RequestParam String name, @RequestBody @Validated PersonDTO person) throws Exception {
-        iSkill.r();
+        //iSkill.r();
 //        PersonDTO dto = new PersonDTO();
 //        dto.setName("James");
 //        dto.setAge(7);
