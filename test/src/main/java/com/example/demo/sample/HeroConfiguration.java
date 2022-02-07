@@ -14,19 +14,19 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class HeroConfiguration {
-    @Bean
+    //@Bean
     //@ConditionalOnProperty(value = "hero.condition",havingValue = "diana",matchIfMissing = true)
     //@Conditional(DianaCondition.class)
-    @ConditionalOnBean(name="mysql")
-    public ISkill diana(){
-        return new Diana("Diana",40);
-    }
+//    @ConditionalOnBean(name="mysql")
+//    public ISkill diana(){
+//        return new Diana("Diana",40);
+//    }
     //@ConditionalOnProperty(value = "hero.condition",havingValue = "irelia")
     //@Conditional(IreliaCondition.class)
-//    @Bean
-//    public ISkill irelia(){
-//        return new Irelia();
-//    }
+    @Bean
+    public ISkill irelia(){
+        return new Irelia();
+    }
 //    @Bean
 //    public ISkill camille(){
 //        return new Camille("Camille",18);

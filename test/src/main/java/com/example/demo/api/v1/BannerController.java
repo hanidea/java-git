@@ -23,12 +23,13 @@ public class BannerController {
     @Autowired
     private BannerService bannerservice;
     @GetMapping("/test")
-    public String test(){
+    public String test() throws Exception{
         iSkill.r();
-        return "Hello,James";
+        throw new Exception("这里错了");
+        //return "Hello,James";
     }
-    @GetMapping("/test1")
-    public void test1(){
-        //iConnect.connect();
-    }
+//    @GetMapping("/test1")
+//    public void test1(){
+//        //iConnect.connect();
+//    }
 }
