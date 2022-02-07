@@ -17,8 +17,8 @@ public class BannerController {
     @Autowired
     //@Qualifier("irelia")
     private ISkill iSkill;
-    @Autowired
-    private IConnect iConnect;
+    //@Autowired
+    //private IConnect iConnect;
     //RestFul API
     @Autowired
     private BannerService bannerservice;
@@ -29,6 +29,6 @@ public class BannerController {
     }
     @GetMapping("/test1")
     public void test1(){
-        iConnect.connect();
+        //iConnect.connect();
     }
 }
