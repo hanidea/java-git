@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class BannerController {
     @Autowired
     //@Qualifier("irelia")
-    private ISkill camille;
+    private ISkill iSkill;
     @Autowired
     private IConnect iConnect;
     //RestFul API
@@ -24,7 +24,7 @@ public class BannerController {
     private BannerService bannerservice;
     @GetMapping("/test")
     public String test(){
-        camille.r();
+        iSkill.r();
         return "Hello,James";
     }
     @GetMapping("/test1")

@@ -3,7 +3,7 @@ package com.example.demo.sample.hero;
 import com.example.demo.sample.ISkill;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Irelia implements ISkill {
     public Irelia() {
         System.out.println("Hello2,7yue");
