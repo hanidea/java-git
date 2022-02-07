@@ -1,6 +1,8 @@
 package com.example.demo.api.v1;
 
 import com.example.demo.Service.BannerService;
+import com.example.demo.exception.http.ForbiddenException;
+import com.example.demo.exception.http.NotFoundException;
 import com.example.demo.sample.IConnect;
 import com.example.demo.sample.ISkill;
 import com.example.demo.sample.hero.Diana;
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
-@RequestMapping("/v1/banner")
+@RequestMapping("/banner")
 public class BannerController {
     @Autowired
     //@Qualifier("irelia")
@@ -25,7 +27,8 @@ public class BannerController {
     @GetMapping("/test")
     public String test() throws Exception{
         iSkill.r();
-        throw new Exception("这里错了");
+        //throw new NotFoundException(10001);
+        throw new ForbiddenException(10001);
         //return "Hello,James";
     }
 //    @GetMapping("/test1")
