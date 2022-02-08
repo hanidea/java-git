@@ -7,6 +7,7 @@ import com.example.demo.exception.http.NotFoundException;
 import com.example.demo.sample.IConnect;
 import com.example.demo.sample.ISkill;
 import com.example.demo.sample.hero.Diana;
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -31,7 +32,7 @@ public class BannerController {
     @Autowired
     private BannerService bannerservice;
     @PostMapping("/test/{id}")
-    public PersonDTO test(@PathVariable @Range(min=1,max=10, message = "不可以超过10哦") Integer id, @RequestParam String name, @RequestBody PersonDTO person) throws Exception {
+    public PersonDTO test(@PathVariable @Range(min=1,max=10, message = "不可以超过10哦") Integer id, @RequestParam @Length(min=8) String name, @RequestBody @Validated PersonDTO person) throws Exception {
         iSkill.r();
 //        PersonDTO dto = new PersonDTO();
 //        dto.setName("123");
