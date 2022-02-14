@@ -5,3 +5,8 @@ Spring:
     url: jdbc:mysql://localhost:3306/missyou?characterEncoding=utf-8&serverTimezone=GMT%2B8
     username: root
     password: Junjie2020!
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

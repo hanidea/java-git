@@ -1,7 +1,8 @@
 package com.example.demo.Service;
 
+import com.example.demo.model.Banner;
 import org.springframework.stereotype.Service;
 
 public interface BannerService {
-    void getByName(String name);
+    Banner getByName(String name);
 }

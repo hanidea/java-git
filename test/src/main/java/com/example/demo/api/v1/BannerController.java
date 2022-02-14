@@ -4,6 +4,7 @@ import com.example.demo.Service.BannerService;
 import com.example.demo.dto.PersonDTO;
 import com.example.demo.exception.http.ForbiddenException;
 import com.example.demo.exception.http.NotFoundException;
+import com.example.demo.model.Banner;
 import com.example.demo.sample.IConnect;
 import com.example.demo.sample.ISkill;
 import com.example.demo.sample.hero.Diana;
@@ -33,8 +34,9 @@ public class BannerController {
     private BannerService bannerservice;
 
     @GetMapping("/name/{name}")
-    public void getByName(@PathVariable String name) {
-
+    public Banner getByName(@PathVariable String name) {
+        Banner banner = bannerservice.getByName(name);
+        return banner;
     }
 
 
