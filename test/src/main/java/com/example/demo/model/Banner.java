@@ -1,19 +1,22 @@
 package com.example.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name="banner1")
+//@Table(name="banner1")
 public class Banner {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(length = 16)
+    //@Column(length = 16)
     private String name;
+    //@Transient
     private String description;
     private String img;
     private String title;
+    @OneToMany
+    @JoinColumn(name="bannerId")
+    private List<BannerItem> items;
 
 }
