@@ -23,17 +23,24 @@ import java.util.Map;
 @RequestMapping("/banner")
 @Validated
 public class BannerController {
-    @Autowired
+    //@Autowired
     //@Qualifier("irelia")
-    private ISkill iSkill;
+    //private ISkill iSkill;
     //@Autowired
     //private IConnect iConnect;
     //RestFul API
     @Autowired
     private BannerService bannerservice;
+
+    @GetMapping("/name/{name}")
+    public void getByName(@PathVariable String name) {
+
+    }
+
+
     @PostMapping("/test/{id}")
     public PersonDTO test(@PathVariable @Range(min=1,max=10, message = "不可以超过10哦") Integer id, @RequestParam @Length(min=8) String name, @RequestBody @Validated PersonDTO person) throws Exception {
-        iSkill.r();
+        //iSkill.r();
 //        PersonDTO dto = new PersonDTO();
 //        dto.setName("123");
 //        dto.setAge(7);

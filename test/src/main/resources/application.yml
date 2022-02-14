@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+han:
+  api-package: com.example.demo.api
