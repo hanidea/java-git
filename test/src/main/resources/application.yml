@@ -3,7 +3,7 @@ spring:
     active: dev
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
 
 han:
   api-package: com.example.demo.api
