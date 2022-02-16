@@ -2,23 +2,12 @@ package com.example.demo.api.v1;
 
 import com.example.demo.Service.BannerService;
 import com.example.demo.dto.PersonDTO;
-import com.example.demo.exception.http.ForbiddenException;
-import com.example.demo.exception.http.NotFoundException;
 import com.example.demo.model.Banner;
-import com.example.demo.sample.IConnect;
-import com.example.demo.sample.ISkill;
-import com.example.demo.sample.hero.Diana;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.constraints.Max;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/banner")

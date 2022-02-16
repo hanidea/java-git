@@ -1,23 +1,25 @@
 package com.example.demo.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
-//@Table(name="banner1")
-public class Banner {
+@Setter
+@Getter
+public class Banner extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    //@Column(length = 16)
+    private int id;
     private String name;
-    //@Transient
     private String description;
-    private String img;
     private String title;
-    @OneToMany(mappedBy = "banner", fetch = FetchType.EAGER)
-    //@org.hibernate.annotations.ForeignKey(name="null")
-    //@JoinColumn(name="bannerId")
-    private List<BannerItem> items;
+    private String img;
 
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "bannerId")
+    private List<BannerItem> items;
 }

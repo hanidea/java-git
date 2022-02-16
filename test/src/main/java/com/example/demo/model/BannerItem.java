@@ -1,20 +1,21 @@
 package com.example.demo.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
+import java.sql.Timestamp;
+import java.util.Objects;
 
 @Entity
-public class BannerItem {
+@Getter
+@Setter
+public class BannerItem extends BaseEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private int id;
     private String img;
     private String keyword;
-    private String type;
+    private short type;
+    private int bannerId;
     private String name;
-
-    private Long bannerId;
-    @ManyToOne
-    @JoinColumn(insertable = false,updatable=false, name="bannerId")
-    private Banner banner;
-
 }
