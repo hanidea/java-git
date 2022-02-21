@@ -1,57 +1,35 @@
 package com.example.demo.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
-public class Spu {
-    private long id;
-    private String subtitle;
-    private String title;
-
+@Getter
+@Setter
+public class Spu extends BaseEntity{
     @Id
-    @Column(name = "id")
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Basic
-    @Column(name = "subtitle")
-    public String getSubtitle() {
-        return subtitle;
-    }
-
-    public void setSubtitle(String subtitle) {
-        this.subtitle = subtitle;
-    }
-
-    @Basic
-    @Column(name = "title")
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Spu spu = (Spu) o;
-        return id == spu.id && Objects.equals(subtitle, spu.subtitle) && Objects.equals(title, spu.title);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, subtitle, title);
-    }
+    private Long id;
+    private String title;
+    private String subtitle;
+    private Long categoryId;
+    private Long rootCategoryId;
+    private Boolean online;
+    private String price;
+    private Long sketchSpecId;
+    private Long defaultSkuId;
+    private String img;
+    private String discountPrice;
+    private String description;
+    private String tags;
+    private Boolean isTest;
+ //   private Object spuThemeImg;
+    private String forThemeImg;
 }

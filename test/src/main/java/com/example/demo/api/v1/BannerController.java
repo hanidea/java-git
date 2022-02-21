@@ -2,12 +2,15 @@ package com.example.demo.api.v1;
 
 import com.example.demo.Service.BannerService;
 import com.example.demo.dto.PersonDTO;
+import com.example.demo.exception.http.NotFoundException;
 import com.example.demo.model.Banner;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.constraints.NotBlank;
 
 @RestController
 @RequestMapping("/banner")
@@ -23,8 +26,11 @@ public class BannerController {
     private BannerService bannerservice;
 
     @GetMapping("/name/{name}")
-    public Banner getByName(@PathVariable String name) {
+    public Banner getByName(@PathVariable @NotBlank String name) {
         Banner banner = bannerservice.getByName(name);
+        if(banner == null){
+            throw new NotFoundException(30005);
+        }
         return banner;
     }
 
