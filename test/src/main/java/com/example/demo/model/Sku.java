@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.example.demo.util.ListAndJson;
 import com.example.demo.util.MapAndJson;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,8 +26,8 @@ public class Sku extends BaseEntity {
     private Long spuId;
 //    @Convert(converter = MapAndJson.class)
 //    private Map<String, Object> test;
-
-    private String specs;
+    @Convert(converter = ListAndJson.class)
+    private List<Object> specs;
     private String code;
     private Long stock;
     private Long categoryId;
