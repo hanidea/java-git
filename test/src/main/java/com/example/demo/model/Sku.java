@@ -23,7 +23,7 @@ public class Sku extends BaseEntity {
     private String img;
     private String title;
     private Long spuId;
-    //private Object specs;
+    private String specs;
     private String code;
     private Long stock;
     private Long categoryId;
