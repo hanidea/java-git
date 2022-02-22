@@ -1,14 +1,14 @@
 package com.example.demo.model;
 
+import com.example.demo.util.MapAndJson;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @Entity
@@ -23,6 +23,9 @@ public class Sku extends BaseEntity {
     private String img;
     private String title;
     private Long spuId;
+//    @Convert(converter = MapAndJson.class)
+//    private Map<String, Object> test;
+
     private String specs;
     private String code;
     private Long stock;
