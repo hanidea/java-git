@@ -1,10 +1,8 @@
 package com.example.demo.dto;
 
-import com.example.demo.Validators.PasswordEqual;
+import com.example.demo.dto.Validators.PasswordEqual;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
-
-import javax.validation.Valid;
 
 @Getter
 //@AllArgsConstructor

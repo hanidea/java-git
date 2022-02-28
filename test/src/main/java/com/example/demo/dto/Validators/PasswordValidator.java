@@ -1,4 +1,4 @@
-package com.example.demo.Validators;
+package com.example.demo.dto.Validators;
 
 import com.example.demo.dto.PersonDTO;
 
