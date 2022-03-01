@@ -2,13 +2,14 @@ package com.example.demo.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTVerificationException;
+import com.auth0.jwt.interfaces.Claim;
+import com.auth0.jwt.interfaces.DecodedJWT;
+import com.auth0.jwt.interfaces.JWTVerifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class JwtToken {
@@ -23,6 +24,30 @@ public class JwtToken {
     public void setExpiredTimeIn(Integer expiredTimeIn) {
         JwtToken.expiredTimeIn = expiredTimeIn;
     }
+
+    public static Optional<Map<String, Claim>> getClaims(String token) {
+        DecodedJWT decodedJWT;
+        Algorithm algorithm = Algorithm.HMAC256(JwtToken.jwtKey);
+        JWTVerifier jwtVerifier = JWT.require(algorithm).build();
+        try {
+            decodedJWT = jwtVerifier.verify(token);
+        } catch (JWTVerificationException e) {
+            return Optional.empty();
+        }
+        return Optional.of(decodedJWT.getClaims());
+    }
+
+    public static Boolean verifyToken(String token) {
+        try {
+            Algorithm algorithm = Algorithm.HMAC256(JwtToken.jwtKey);
+            JWTVerifier verifier = JWT.require(algorithm).build();
+            verifier.verify(token);
+        } catch (JWTVerificationException e) {
+            return false;
+        }
+        return true;
+    }
+
     public static String makeToken(Long uid, Integer scope){
         return JwtToken.getToken(uid, scope);
     }
