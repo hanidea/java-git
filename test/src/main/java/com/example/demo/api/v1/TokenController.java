@@ -14,13 +14,13 @@ import java.util.Map;
 @RestController
 public class TokenController {
     @Autowired
-    private WxAuthenticationService wxAuthenticationService
+    private WxAuthenticationService wxAuthenticationService;
 
     @PostMapping("")
     public Map<String,String> getToken(@RequestBody @Validated TokenGetDTO userData){
         Map<String, String> map = new HashMap<>();
         String token = null;
-        switch (userData.getLoginType()) {
+        switch (userData.getType()) {
             case USER_WX:
                 token = wxAuthenticationService.code2Session(userData.getAccount());
                 break;
