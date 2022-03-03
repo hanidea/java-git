@@ -1,5 +1,7 @@
 package com.example.demo.core;
 
+import com.example.demo.exception.CreateSuccess;
+
 public class UnifyResponse {
     public int getCode() {
         return code;
@@ -21,5 +23,8 @@ public class UnifyResponse {
         this.code = code;
         this.message = message;
         this.request = request;
+    }
+    public static void createSuccess(int code) {
+        throw new CreateSuccess(code);
     }
 }

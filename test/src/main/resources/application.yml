@@ -11,3 +11,8 @@ spring:
 
 han:
   api-package: com.example.demo.api
+
+wx:
+  appid: wx434a0eb05adde3d6
+  appsecret: 93f06faa4771b6ceb636bc9c151dd867
+  code2session: https://api.weixin.qq.com/sns/jscode2session?appid={0}&secret={1}&js_code={2}&grant_type=authorization_code
