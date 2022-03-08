@@ -11,6 +11,7 @@ spring:
 
 han:
   api-package: com.example.demo.api
+  year-codes: A,B,C,D,E,F,G,H,I,J,K,L
 
 wx:
   appid: wx434a0eb05adde3d6

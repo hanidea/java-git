@@ -3,6 +3,7 @@ package com.example.demo.model;
 import com.example.demo.util.GenericAndJson;
 import com.example.demo.util.ListAndJson;
 import com.example.demo.util.MapAndJson;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.type.TypeReference;
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Entity
 @Getter
@@ -43,7 +45,13 @@ public class Sku extends BaseEntity {
         }
         this.specs = GenericAndJson.objectToJson(specs);
     }
-
+    public BigDecimal getActualPrice() {
+        return discountPrice == null ? this.price : this.discountPrice;
+    }
+    @JsonIgnore
+    public List<String> getSpecValueList() {
+        return this.getSpecs().stream().map(Spec::getValue).collect(Collectors.toList());
+    }
     //    @Convert(converter = MapAndJson.class)
 //    private Map<String, Object> test;
     //@Convert(converter = ListAndJson.class)

@@ -14,3 +14,5 @@ han:
   security:
     jwt-key: 88888888JamesJJJJJJ
     token-expired-in: 86400000
+  order:
+    max-sku-limit: 777
