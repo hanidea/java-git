@@ -1,5 +1,6 @@
 package com.example.demo.Service;
 
+import com.example.demo.core.LocalUser;
 import com.example.demo.core.enumeration.OrderStatus;
 import com.example.demo.core.money.IMoneyDiscount;
 import com.example.demo.dto.OrderDTO;
@@ -18,6 +19,10 @@ import com.example.demo.util.CommonUtil;
 import com.example.demo.util.OrderUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -108,35 +113,35 @@ public class OrderService {
 //        }
 //    }
 //
-//    public Page<Order> getUnpaid(Integer page, Integer size) {
-//        Pageable pageable = PageRequest.of(page, size, Sort.by("createTime").descending());
-//        Long uid = LocalUser.getUser().getId();
-//        Date now = new Date();
-//        return this.orderRepository.findByExpiredTimeGreaterThanAndStatusAndUserId(now, OrderStatus.UNPAID.value(), uid, pageable);
-//    }
+    public Page<Order> getUnpaid(Integer page, Integer size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createTime").descending());
+        Long uid = LocalUser.getUser().getId();
+        Date now = new Date();
+        return this.orderRepository.findByExpiredTimeGreaterThanAndStatusAndUserId(now, OrderStatus.UNPAID.value(), uid, pageable);
+    }
+
+    public Page<Order> getByStatus(Integer status, Integer page, Integer size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createTime").descending());
+        Long uid = LocalUser.getUser().getId();
+        if (status == OrderStatus.All.value()) {
+            return this.orderRepository.findByUserId(uid, pageable);
+        }
+        return this.orderRepository.findByUserIdAndStatus(uid, status, pageable);
+    }
 //
-//    public Page<Order> getByStatus(Integer status, Integer page, Integer size) {
-//        Pageable pageable = PageRequest.of(page, size, Sort.by("createTime").descending());
-//        Long uid = LocalUser.getUser().getId();
-//        if (status == OrderStatus.All.value()) {
-//            return this.orderRepository.findByUserId(uid, pageable);
-//        }
-//        return this.orderRepository.findByUserIdAndStatus(uid, status, pageable);
-//    }
+    public Optional<Order> getOrderDetail(Long oid) {
+        Long uid = LocalUser.getUser().getId();
+        return this.orderRepository.findFirstByUserIdAndId(uid, oid);
+    }
 //
-//    public Optional<Order> getOrderDetail(Long oid) {
-//        Long uid = LocalUser.getUser().getId();
-//        return this.orderRepository.findFirstByUserIdAndId(uid, oid);
-//    }
-//
-//    public void updateOrderPrepayId(Long orderId, String prePayId) {
-//        Optional<Order> order = this.orderRepository.findById(orderId);
-//        order.ifPresent(o -> {
-//            o.setPrepayId(prePayId);
-//            this.orderRepository.save(o);
-//        });
-//        order.orElseThrow(() -> new ParameterException(10007));
-//    }
+    public void updateOrderPrepayId(Long orderId, String prePayId) {
+        Optional<Order> order = this.orderRepository.findById(orderId);
+        order.ifPresent(o -> {
+            o.setPrepayId(prePayId);
+            this.orderRepository.save(o);
+        });
+        order.orElseThrow(() -> new ParameterException(10007));
+    }
 //
 //
     private void writeOffCoupon(Long couponId, Long oid, Long uid) {
