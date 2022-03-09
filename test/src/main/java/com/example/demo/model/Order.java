@@ -10,6 +10,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.IDENTITY;
@@ -62,13 +63,13 @@ public class Order extends BaseEntity {
 //        return false;
 //    }
 //
-//    //
-//    public void setSnapItems(List<OrderSku> orderSkuList) {
-//        if (orderSkuList.isEmpty()) {
-//            return;
-//        }
-//        this.snapItems = GenericAndJson.objectToJson(orderSkuList);
-//    }
+    //
+    public void setSnapItems(List<OrderSku> orderSkuList) {
+        if (orderSkuList.isEmpty()) {
+            return;
+        }
+        this.snapItems = GenericAndJson.objectToJson(orderSkuList);
+    }
 //
 //    public List<OrderSku> getSnapItems() {
 //        List<OrderSku> list = GenericAndJson.jsonToObject(this.snapItems,

@@ -1,17 +1,18 @@
 package com.example.demo.Service;
 
+import com.example.demo.core.enumeration.OrderStatus;
 import com.example.demo.core.money.IMoneyDiscount;
 import com.example.demo.dto.OrderDTO;
 import com.example.demo.dto.SkuInfoDTO;
+import com.example.demo.exception.http.ForbiddenException;
 import com.example.demo.exception.http.NotFoundException;
 import com.example.demo.exception.http.ParameterException;
 import com.example.demo.logic.CouponChecker;
 import com.example.demo.logic.OrderChecker;
-import com.example.demo.model.Coupon;
-import com.example.demo.model.Order;
-import com.example.demo.model.Sku;
-import com.example.demo.model.UserCoupon;
+import com.example.demo.model.*;
 import com.example.demo.repository.CouponRepository;
+import com.example.demo.repository.OrderRepository;
+import com.example.demo.repository.SkuRepository;
 import com.example.demo.repository.UserCouponRepository;
 import com.example.demo.util.CommonUtil;
 import com.example.demo.util.OrderUtil;
@@ -19,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.Date;
@@ -37,26 +39,26 @@ public class OrderService {
 
     @Autowired
     private UserCouponRepository userCouponRepository;
-//
-//    @Autowired
-//    private SkuRepository skuRepository;
-//
-//    @Autowired
-//    private OrderRepository orderRepository;
+
+    @Autowired
+    private SkuRepository skuRepository;
+
+    @Autowired
+    private OrderRepository orderRepository;
 
     @Autowired
     private IMoneyDiscount iMoneyDiscount;
 
-    @Value("${missyou.order.max-sku-limit}")
+    @Value("${han.order.max-sku-limit}")
     private int maxSkuLimit;
 
-    @Value("${missyou.order.pay-time-limit}")
+    @Value("${han.order.pay-time-limit}")
     private Integer payTimeLimit;
 //
 //    @Autowired
 //    private StringRedisTemplate stringRedisTemplate;
 //
-//    @Transactional
+    @Transactional
     public Long placeOrder(Long uid, OrderDTO orderDTO, OrderChecker orderChecker) {
         String orderNo = OrderUtil.makeOrderNo();
         Calendar now = Calendar.getInstance();
@@ -84,13 +86,13 @@ public class OrderService {
         //reduceStock
         //核销优惠券
         //加入到延迟消息队列
-
-        Long couponId = -1L;
+//
+//        Long couponId = -1L;
         if (orderDTO.getCouponId() != null) {
             this.writeOffCoupon(orderDTO.getCouponId(), order.getId(), uid);
-            couponId = orderDTO.getCouponId();
+            //couponId = orderDTO.getCouponId();
         }
-        this.sendToRedis(order.getId(), uid, couponId);
+//        this.sendToRedis(order.getId(), uid, couponId);
         return order.getId();
     }
 //    private void sendToRedis(Long oid, Long uid, Long couponId) {
@@ -137,22 +139,22 @@ public class OrderService {
 //    }
 //
 //
-//    private void writeOffCoupon(Long couponId, Long oid, Long uid) {
-//        int result = this.userCouponRepository.writeOff(couponId, oid, uid);
-//        if (result != 1) {
-//            throw new ForbiddenException(40012);
-//        }
-//    }
-//
-//    private void reduceStock(OrderChecker orderChecker) {
-//        List<OrderSku> orderSkuList = orderChecker.getOrderSkuList();
-//        for (OrderSku orderSku : orderSkuList) {
-//            int result = this.skuRepository.reduceStock(orderSku.getId(), orderSku.getCount().longValue());
-//            if (result != 1) {
-//                throw new ParameterException(50003);
-//            }
-//        }
-//    }
+    private void writeOffCoupon(Long couponId, Long oid, Long uid) {
+        int result = this.userCouponRepository.writeOff(couponId, oid, uid);
+        if (result != 1) {
+            throw new ForbiddenException(40012);
+        }
+    }
+
+    private void reduceStock(OrderChecker orderChecker) {
+        List<OrderSku> orderSkuList = orderChecker.getOrderSkuList();
+        for (OrderSku orderSku : orderSkuList) {
+            int result = this.skuRepository.reduceStock(orderSku.getId(), orderSku.getCount().longValue());
+            if (result != 1) {
+                throw new ParameterException(50003);
+            }
+        }
+    }
 
     public OrderChecker isOk(Long uid, OrderDTO orderDTO) {
         if (orderDTO.getFinalTotalPrice().compareTo(new BigDecimal("0")) <= 0) {

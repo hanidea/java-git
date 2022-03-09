@@ -11,7 +11,7 @@ public class OrderUtil {
     // B3230651812529
     private static String[] yearCodes;
 
-    @Value("${missyou.year-codes}")
+    @Value("${han.year-codes}")
     public void setYearCodes(String yearCodes) {
         String[] chars = yearCodes.split(",");
         OrderUtil.yearCodes = chars;
