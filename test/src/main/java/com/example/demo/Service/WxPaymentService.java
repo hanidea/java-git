@@ -48,7 +48,6 @@ public class WxPaymentService {
         if (order.needCancel()) {
             throw new ForbiddenException(50010);
         }
-        return null;
         WXPay wxPay = this.assembleWxPayConfig();
         Map<String, String> params = this.makePreOrderParams(order.getFinalTotalPrice(), order.getOrderNo());
         Map<String, String> wxOrder;

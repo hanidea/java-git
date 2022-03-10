@@ -1,5 +1,6 @@
 package com.example.demo.api.v1;
 
+import com.example.demo.Service.WxPaymentNotifyService;
 import com.example.demo.Service.WxPaymentService;
 import com.example.demo.core.interceptors.ScopeLevel;
 import com.example.demo.lib.HanWxNotify;
@@ -24,9 +25,9 @@ public class PaymentController {
 
     @Autowired
     private WxPaymentService wxPaymentService;
-//
-//    @Autowired
-//    private WxPaymentNotifyService wxPaymentNotifyService;
+
+    @Autowired
+    private WxPaymentNotifyService wxPaymentNotifyService;
 
 
     @PostMapping("/pay/order/{id}")
