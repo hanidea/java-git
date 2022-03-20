@@ -32,6 +32,14 @@ public class BannerController {
         return new DeletedVO();
     }
 
+    @GetMapping("/{id}")
+//    @LoginRequired
+//    @PermissionMeta(value = "查询Banner")
+//    @Logger(template = "{user.username}查询了Banner数据") BannerWithItemsBO
+    public void getWithItems(@PathVariable @Positive Integer id) {
+        return bannerService.getWithItems(id);
+    }
+
     @PutMapping("/{id}")
 //    @PermissionMeta(value = "更新Banner")
 //    @GroupRequired
