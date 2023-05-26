@@ -13,14 +13,6 @@
         <module name="foodie-dev-mapper" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="foodie-dev" target="1.8" />
-      <module name="foodie-dev-api" target="8" />
-      <module name="foodie-dev-common" target="8" />
-      <module name="foodie-dev-mapper" target="8" />
-      <module name="foodie-dev-pojo" target="8" />
-      <module name="foodie-dev-service" target="8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
