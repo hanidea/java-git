@@ -41,5 +41,6 @@
         <table tableName="order_status"></table>
         <table tableName="user_address"></table>
         <table tableName="users"></table>
+        <table tableName="stu"></table>
     </context>
 </generatorConfiguration>
