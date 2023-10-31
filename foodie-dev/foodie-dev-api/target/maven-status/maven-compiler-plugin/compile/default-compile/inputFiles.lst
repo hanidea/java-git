@@ -3,3 +3,4 @@
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/PassportController.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/HelloController.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/StuFooController.java
+/Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/config/CorsConfig.java
