@@ -1,5 +1,6 @@
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/Application.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/config/Swagger2.java
+/Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/aspect/ServiceLogAspect.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/PassportController.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/HelloController.java
 /Users/junjiezhang/developer/java-git/foodie-dev/foodie-dev-api/src/main/java/com/imooc/controller/StuFooController.java
